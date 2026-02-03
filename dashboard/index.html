@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Sync Store - DB Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <aside>
+        <h2>DB Manager</h2>
+        <div class="sidebar-subtitle">local-sync-store</div>
+
+        <button class="btn-create" onclick="createNew()">➕ Create
+            New</button>
+
+        <button id="btnSeed">🌱 Seed Example Data</button>
+        <button id="btnLoad" class="btn-import">📥 Import from Disk</button>
+        <button id="btnRefresh" class="secondary">🔄 Refresh View</button>
+        <div class="spacer"></div>
+        <button id="btnClear" class="danger">⚠️ Wipe Database</button>
+    </aside>
+
+    <main>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="statAggregates">0</div>
+                <div class="stat-label">Aggregates</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statEvents">0</div>
+                <div class="stat-label">Total Events</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statOutbox">0</div>
+                <div class="stat-label">Pending Sync</div>
+            </div>
+        </div>
+
+        <div class="viewer">
+            <div class="tabs">
+                <div class="tab active" data-view="aggregates">Aggregates</div>
+                <div class="tab" data-view="outbox">Outbox (Sync Queue)</div>
+                <div class="tab" data-view="raw">Raw Storage</div>
+                <div class="toolbar-spacer"></div>
+                <button id="btnColumns">👁️ Columns</button>
+            </div>
+            <div class="content-area" id="content">
+                <!-- Dynamic Content Here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Generic Editor Modal -->
+    <dialog id="editorModal">
+        <h3 id="modalTitle">Edit Item</h3>
+        <div class="form-group">
+            <label class="form-label">Aggregate Type</label>
+            <input type="text" id="modalType">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Payload (JSON)</label>
+            <textarea id="modalPayload" rows="10"></textarea>
+        </div>
+        <div class="modal-actions">
+            <button class="secondary" onclick="document.getElementById('editorModal').close()">Cancel</button>
+            <button id="modalSaveParams">Save Changes</button>
+        </div>
+    </dialog>
+
+    <script type="module" src="./app.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "aggregateId": "26fb161c-41c7-4809-8971-f147798490f8",
+  "aggregateType": "user",
+  "eventType": "USER_DELETED",
+  "payload": {
+    "deletedAt": "2026-02-03T05:43:46.739Z"
+  },
+  "eventId": "16db88fc-0e05-4ac0-b2a0-466ed7b4c4fd",
+  "timestamp": "2026-02-03T05:43:46.739Z",
+  "version": 2
+}

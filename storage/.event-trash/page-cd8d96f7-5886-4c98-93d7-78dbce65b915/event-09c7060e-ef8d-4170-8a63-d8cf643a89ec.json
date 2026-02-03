@@ -1,0 +1,11 @@
+{
+  "aggregateId": "cd8d96f7-5886-4c98-93d7-78dbce65b915",
+  "aggregateType": "page",
+  "eventType": "PAGE_DELETED",
+  "payload": {
+    "deletedAt": "2026-02-03T05:43:56.691Z"
+  },
+  "eventId": "09c7060e-ef8d-4170-8a63-d8cf643a89ec",
+  "timestamp": "2026-02-03T05:43:56.691Z",
+  "version": 3
+}

@@ -1,0 +1,34 @@
+{
+    "name": "polyglot-persistence",
+    "version": "1.0.0",
+    "description": "Offline-first Event Store with CQRS pattern and sync capabilities.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "test": "vitest"
+    },
+    "keywords": [
+        "cqrs",
+        "event-store",
+        "offline-first",
+        "sync",
+        "localstorage"
+    ],
+    "author": "Gellish",
+    "license": "ISC",
+    "devDependencies": {
+        "@playwright/test": "^1.58.1",
+        "@types/node": "^25.2.0",
+        "body-parser": "^2.2.2",
+        "cors": "^2.8.6",
+        "express": "^5.2.1",
+        "jsdom": "^28.0.0",
+        "typescript": "^5.9.3",
+        "vite": "^7.3.1",
+        "vitest": "^4.0.18"
+    },
+    "dependencies": {
+        "uuid": "^13.0.0"
+    }
+}

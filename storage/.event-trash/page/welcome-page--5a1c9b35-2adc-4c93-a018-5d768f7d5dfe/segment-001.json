@@ -1,0 +1,26 @@
+[
+  {
+    "aggregateId": "5a1c9b35-2adc-4c93-a018-5d768f7d5dfe",
+    "aggregateType": "page",
+    "eventType": "PAGE_CREATED",
+    "payload": {
+      "title": "Welcome to MicroFramework",
+      "slug": "welcome-page",
+      "status": "published"
+    },
+    "version": 1,
+    "eventId": "aaadc710-9b8e-4be5-943f-a6d3d1761bf4",
+    "timestamp": "2026-02-03T15:45:07.187Z"
+  },
+  {
+    "aggregateId": "5a1c9b35-2adc-4c93-a018-5d768f7d5dfe",
+    "aggregateType": "page",
+    "eventType": "PAGE_CONTENT_UPDATED",
+    "payload": {
+      "content": "# Hello World\n\nThis content is stored in the local CQRS Event Store!"
+    },
+    "version": 2,
+    "eventId": "1ba49251-48c6-44cc-a5f4-65a1ef885023",
+    "timestamp": "2026-02-03T15:45:07.187Z"
+  }
+]

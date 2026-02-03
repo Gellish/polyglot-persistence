@@ -1,0 +1,11 @@
+{
+  "aggregateId": "cd8d96f7-5886-4c98-93d7-78dbce65b915",
+  "aggregateType": "page",
+  "eventType": "PAGE_CONTENT_UPDATED",
+  "payload": {
+    "content": "# Hello World\n\nThis content is stored in the local CQRS Event Store!"
+  },
+  "version": 2,
+  "eventId": "7f66ded3-ba75-4520-8ad0-3ebca33831ea",
+  "timestamp": "2026-02-03T04:46:17.437Z"
+}

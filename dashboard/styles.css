@@ -1,0 +1,302 @@
+:root {
+    --bg: #1e1e1e;
+    --surface: #252526;
+    --border: #3e3e42;
+    --text: #d4d4d4;
+    --primary: #0e639c;
+    --danger: #f85149;
+    --success: #89d185;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+/* Sidebar */
+aside {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.danger {
+    background: var(--danger);
+}
+
+button.secondary {
+    background: var(--border);
+}
+
+/* Main Content */
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Stats Panel */
+.stats {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.stat-label {
+    opacity: 0.7;
+    font-size: 0.9em;
+}
+
+/* Data Viewer */
+.viewer {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: #181818;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-right: 1px solid var(--border);
+}
+
+.tab.active {
+    background: var(--surface);
+    border-bottom: 2px solid var(--primary);
+}
+
+.content-area {
+    flex: 1;
+    overflow: auto;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--text);
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #2d2d2d;
+}
+
+pre {
+    background: #111;
+    padding: 10px;
+    border-radius: 4px;
+    overflow: auto;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    background: #333;
+}
+
+/* Refactored Inline Styles */
+
+.sidebar-subtitle {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.btn-create {
+    background: var(--success);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-import {
+    background: #d99e00;
+}
+
+.spacer {
+    flex: 1;
+}
+
+#editorModal {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+#editorModal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modalTitle {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+#modalType,
+#modalPayload {
+    width: 100%;
+    padding: 8px;
+    background: #111;
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#modalPayload {
+    font-family: monospace;
+}
+
+/* Data Grid / Airtable-like Styles */
+
+.toolbar-spacer {
+    flex: 1;
+}
+
+#btnColumns {
+    margin: 5px;
+    padding: 4px 10px;
+    font-size: 0.9em;
+}
+
+.column-picker-dialog {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 200px;
+    display: none;
+}
+
+.column-picker-dialog.visible {
+    display: block;
+}
+
+.column-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.column-option:hover {
+    opacity: 0.8;
+}
+
+.column-option input[type="checkbox"] {
+    accent-color: var(--primary);
+}
+
+/* Dynamic Table Styles */
+th.dynamic-col {
+    background: #2d2d30;
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    border-right: 1px solid var(--border);
+    padding: 8px 12px;
+}
+
+td.dynamic-cell {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-right: 1px solid var(--border);
+    padding: 8px 12px;
+}
+
+/* Edit on click style */
+td.dynamic-cell:hover {
+    background: #333;
+    cursor: text;
+}

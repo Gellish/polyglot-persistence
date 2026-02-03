@@ -1,0 +1,13 @@
+{
+  "aggregateId": "d379a5bc-1807-4cee-8f57-3816fa59783b",
+  "aggregateType": "page",
+  "eventType": "PAGE_CREATED",
+  "payload": {
+    "title": "Welcome to MicroFramework",
+    "slug": "welcome-page",
+    "status": "published"
+  },
+  "version": 1,
+  "eventId": "11d2f3d9-3355-4d60-ab8b-50c363f155a0",
+  "timestamp": "2026-02-03T04:46:20.378Z"
+}

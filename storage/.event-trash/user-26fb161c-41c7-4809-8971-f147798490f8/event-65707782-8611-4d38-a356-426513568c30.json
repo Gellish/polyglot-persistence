@@ -1,0 +1,13 @@
+{
+  "aggregateId": "26fb161c-41c7-4809-8971-f147798490f8",
+  "aggregateType": "user",
+  "eventType": "USER_CREATED",
+  "payload": {
+    "name": "Demo User",
+    "email": "demo@microframework.com",
+    "role": "admin"
+  },
+  "version": 1,
+  "eventId": "65707782-8611-4d38-a356-426513568c30",
+  "timestamp": "2026-02-03T04:57:40.471Z"
+}
